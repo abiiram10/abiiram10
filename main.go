@@ -3,11 +3,12 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 )
 
 func main() {
 
-	port := "8888" // os.Getenv("PORT")
+	port := os.Getenv("PORT")
 	if port == "" {
 		log.Fatal("$PORT must be set")
 	}
